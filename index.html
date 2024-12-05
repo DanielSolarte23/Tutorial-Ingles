@@ -1,0 +1,102 @@
+<!-- We are going to create a basic HTML layout, first we establish the document type and its configurations inside the head tag -->
+
+<!DOCTYPE html> <!-- Defines the document as HTML5 -->
+<html lang="en"> <!-- Sets the language of the document to English -->
+<head> <!-- The head tag contains configurations and imports -->
+    <meta charset="UTF-8"> <!-- Specifies the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive on all devices -->
+    <title>Simple Layout</title> <!-- The title of the webpage, displayed in the browser tab -->
+
+    <!-- From here, we will style the HTML document by using the tag names inside the style tag -->
+    <style>
+        body {
+            /* By using the tag name, we style it */
+            font-family: Arial, sans-serif; /* Sets the font for the entire page */
+            margin: 0; /* Removes the default margin */
+            padding: 0; /* Removes the default padding */
+            box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+            height: 100vh; /* Sets the height of the body to the full viewport height */
+            display: flex; /* Enables Flexbox layout for the body */
+            flex-direction: column; /* Organizes child elements vertically */
+            justify-content: space-between; /* Distributes space to ensure header and footer are at opposite ends */
+        }
+        header {
+            background-color: #5e21c0; /* Sets the background color of the header */
+            color: white; /* Sets the text color to white */
+            text-align: center; /* Centers the text horizontally */
+            padding: 1rem 0; /* Adds padding above and below the header content */
+        }
+        nav {
+            background-color: #333; /* Sets the background color of the navigation bar */
+            padding: 1rem; /* Adds padding inside the navigation */
+        }
+        nav a {
+            color: white; /* Sets the text color of the links to white */
+            padding: 0.5rem; /* Adds padding around each link */
+            text-decoration: none; /* Removes the underline from the links */
+        }
+        nav a:hover {
+            /* The hover pseudo-class will apply styles when the mouse is over the HTML element in the browser */
+            background-color: #ddd; /* Changes the background color when hovering over a link */
+            color: black; /* Changes the text color to black on hover */
+        }
+        main {
+            padding: 2rem; /* Adds padding inside the main content area */
+            background-color: #f4f4f4; /* Sets a light gray background color for the main section */
+        }
+        section {
+            margin-bottom: 1rem; /* Adds margin below each section */
+        }
+        footer {
+            background-color: #333; /* Sets the background color of the footer */
+            color: white; /* Sets the text color to white */
+            text-align: center; /* Centers the text horizontally in the footer */
+            padding: 1rem 0; /* Adds padding above and below the footer content */
+            position: relative; /* Positions the footer relative to its normal position */
+            bottom: 0; /* Ensures the footer stays at the bottom of the page */
+            width: 100%; /* Makes the footer span the full width of the page */
+        }
+    </style>
+</head>
+<!-- From here, we are going to structure the HTML document, which will be rendered in the browser inside the body tag -->
+<body> <!-- The body tag contains the main content of the document -->
+    <!-- We set up the header -->
+    <header> <!-- Inside the header tag will go the content of the header -->
+        <h1>My Website</h1> <!-- The main title of the website -->
+    </header>
+    <!-- Then the navigation bar -->
+    <nav> <!-- The nav tag will contain the navigation bar content -->
+        <a href="#home">Home</a> <!-- Link to the home section -->
+        <a href="#about">About Us</a> <!-- Link to the about section -->
+        <a href="#services">Services</a> <!-- Link to the services section -->
+        <a href="#contact">Contact</a> <!-- Link to the contact section -->
+    </nav>
+    <!-- The main content, divided into sections -->
+    <main>
+        <section id="home"> <!-- Each section will be inside the section tag -->
+            <h2>Welcome to My Website</h2> <!-- Section title for the home area -->
+            <p>This is an example of a simple layout in HTML.</p> <!-- Paragraph introducing the site -->
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2> <!-- Section title for the about us area -->
+            <p>We are a company dedicated to providing quality services.</p> <!-- Description of the company -->
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2> <!-- Section title for the services area -->
+            <p>We offer a wide range of services tailored to your needs.</p> <!-- Brief about the services offered -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2> <!-- Section title for the contact area -->
+            <p>You can contact us through the form on our contact page.</p> <!-- Instructions to contact the company -->
+        </section>
+    </main>
+    <!-- Lastly, we structure the footer -->
+    <footer> <!-- We use the footer tag to contain the footer content -->
+        <p>&copy; 2024 My Website. All rights reserved.</p> <!-- Copyright notice -->
+    </footer>
+
+</body>
+</html>
